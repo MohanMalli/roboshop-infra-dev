@@ -48,7 +48,7 @@ module "mongodb" {
     project = var.project
     environment = var.environment
 
-  sg_name = "mongodb'
+  sg_name = "mongodb"
   sg_description = "for mongodb"
   vpc_id = local.vpc_id
 }
@@ -70,7 +70,7 @@ resource "aws_security_group_rule" "backend_alb_bastion" {
   from_port                = 80
   to_port                  = 80
   protocol                 = "tcp"
-  source_security_group_id = module.bastion.sg_id # here we placing bastion security_group_id instant of ip
+  source_security_group_id = module.bastion.sg_id  #here we placing bastion security_group_id instant of ip
   security_group_id        = module.backend_alb.sg_id 
 }
 
