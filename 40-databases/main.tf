@@ -29,10 +29,10 @@ resource "terraform_data" "mongodb" {
   host     = aws_instance.mongodb.private_ip
   }
 
- provisioner "remote-exec" {
+  provisioner "remote-exec" {
   inline = [
     "chmod +x /tmp/bootstrap.sh",
-     "sudo sh /tmp/bootstrap.sh mongodb"
+    "sudo sh /tmp/bootstrap.sh mongodb"
    ]
  }
 }
