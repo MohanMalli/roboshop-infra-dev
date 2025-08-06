@@ -9,11 +9,28 @@ resource "aws_key_pair" "openvpn" {
   subnet_id  = local.public_subnet_id
   key_name = aws_key_pair.openvpn.key_name
   user_data = file ("openvpn.sh")
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4d20c48 (terraform)
   tags = merge(
     local.common_tags,
     {
      Name = "${var.project}-${var.environment}-vpn"
     }
   )
+<<<<<<< HEAD
  }
+=======
+}
+
+resource "aws_route53_record" "vpn" {
+ zone_id = var.zone_id
+ name = "vpn-${var.environment}.${var.zone_name}"
+ type = "A"
+ ttl  = 1
+ records = [aws_instance.vpn.public_ip]
+ allow_overwrite = true
+}
+>>>>>>> 4d20c48 (terraform)
 
