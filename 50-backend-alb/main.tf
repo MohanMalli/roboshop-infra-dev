@@ -30,10 +30,8 @@ resource "aws_lb_listener" "backend_alb" {
       status_code  = "200"
     }
   }
-<<<<<<< HEAD
 }
-=======
-}
+
 
 resource "aws_route53_record" "backend_alb" {
   zone_id = var.zone_id
@@ -46,4 +44,4 @@ resource "aws_route53_record" "backend_alb" {
     evaluate_target_health = true
   }
 }
->>>>>>> 4d20c48 (terraform)
+

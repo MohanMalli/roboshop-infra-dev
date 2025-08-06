@@ -4,8 +4,6 @@
 
 variable "environment" {
     default = "dev"
-<<<<<<< HEAD
-=======
 }
 
 variable "zone_id"{
@@ -14,5 +12,4 @@ variable "zone_id"{
 
 variable "zone_name" {
     default = "malli.site"
->>>>>>> 4d20c48 (terraform)
 }
