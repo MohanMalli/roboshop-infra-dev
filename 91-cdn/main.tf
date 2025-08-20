@@ -8,7 +8,7 @@ resource "aws_cloudfront_distribution" "roboshop" {
      origin_ssl_protocols   = ["TLSv1.2"]
     }
    
-   origin_id                = "cdn.${var.zone_name}"
+   origin_id                = "dev.${var.zone_name}"
   }
 
   enabled             = true
