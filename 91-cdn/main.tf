@@ -14,7 +14,7 @@ resource "aws_cloudfront_distribution" "roboshop" {
   enabled             = true
  
 
-  aliases = ["cdn.malli.site"]
+  aliases = ["cdn-malli.site"]
 
   default_cache_behavior {
     allowed_methods  = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]
