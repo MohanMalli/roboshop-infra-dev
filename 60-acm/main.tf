@@ -30,7 +30,7 @@ resource "aws_route53_record" "malli" {
   zone_id         = var.zone_id
 }
 
- resource "aws_acm_certificate_validation" "malli" {
+resource "aws_acm_certificate_validation" "malli" {
   certificate_arn         = aws_acm_certificate.malli.arn
   validation_record_fqdns = [for record in aws_route53_record.malli : record.fqdn]
 }
